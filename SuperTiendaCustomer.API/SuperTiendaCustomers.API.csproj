@@ -5,13 +5,28 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>cd59019d-c353-42d2-a1b6-ae0303aed271</UserSecretsId>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+    <PackageReference Include="Serilog" Version="4.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DependencyInjections\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="SeedData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuperTiendaCustomer.Infrastructure\SuperTiendaCustomer.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
