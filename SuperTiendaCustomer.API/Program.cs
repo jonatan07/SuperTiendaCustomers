@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using SuperTiendaCustomer.Infrastructure.Context;
+using SuperTiendaCustomers.API.DependencyInjections;
 using SuperTiendaCustomers.API.Extensions;
 using SuperTiendaCustomers.API.HealthCheckers;
 using System.Reflection;
@@ -62,6 +63,12 @@ builder.Services.AddSwaggerGen( c =>
     c.CustomSchemaIds(type => type.ToString());
 
 });
+
+// -------------------------
+//   DEPENDENCY INJECTIONS
+// -------------------------
+MediatorDependencies.AddDependencies(builder.Services);
+//RepositoryDependencies.AddDependencies(builder.Services);
 
 // -------------------------
 //      HEALTH CHECKERS
