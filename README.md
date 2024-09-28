@@ -12,6 +12,7 @@ La tecnologia que usan en el MS este son las siguientes:
 - Serilog
 - MediatR
 - Swagger (Open API)
+- Docker
 
 ## Base de datos
 - Sql server
@@ -21,7 +22,11 @@ La tecnologia que usan en el MS este son las siguientes:
 - CQRS
 - Repository
 - UnitOfWork
+- Onio
 
 ## Buenas practicas implementadas:
 - Solid
 - Dry
+- DTO
+- Health check
+- CORS
